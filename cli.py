@@ -17,6 +17,8 @@ def build_parser():
     prune = subparsers.add_parser("prune-versions",parents=[common])
     prune.add_argument("--pattern",required=True)
     prune.add_argument("--strategy",choices=["mtime","semantic"],default="mtime")
+
+    undo = subparsers.add_parser("undo", parents=[common])
     
     return parser
 

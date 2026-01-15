@@ -1,5 +1,6 @@
 from pathlib import Path
 import re
+from undo import undo_archival
 
 
 def scan_for_archival(args):
@@ -10,11 +11,13 @@ def scan_for_archival(args):
     :param args: Parsed command-line arguments
     :return: List of Path objects to archive
     """
+    
     root = Path(args.dir)
     archive_candidates = []
 
     if args.command == "whitelist":
         archive_candidates = _scan_whitelist(root, args.keep)
+        print(f"Keep list: {args.keep}")
 
     elif args.command == "prune-versions":
         archive_candidates = _scan_prune_versions(
@@ -22,7 +25,7 @@ def scan_for_archival(args):
             pattern=args.pattern,
             strategy=args.strategy,
         )
-
+        
     return archive_candidates
 
 

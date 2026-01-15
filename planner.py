@@ -6,6 +6,10 @@ def plan_archive_operations(archive_candidates):
     :return: List of planned archive operations
     """
     plans = []
+    
     for candidate in archive_candidates:
         plans.append(f"Archive {candidate}")
+    
+    if not plans:
+        plans.append("No files to archive.")
     return plans
