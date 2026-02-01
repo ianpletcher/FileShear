@@ -1,5 +1,6 @@
 # Virtual environments
 .venv/
+tmp/
 
 # Python cache
 __pycache__/
@@ -16,5 +17,6 @@ dist/
 .__pycache__/
 
 # macOS noise
-.DS_Store
+**/.DS_Store
+
 
