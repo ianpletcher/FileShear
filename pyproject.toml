@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fileshear"
+version = "0.1.0"
+description = "Safe, undoable archival and version pruning for local files"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ian Pletcher" }]
+requires-python = ">=3.9"
+
+[project.scripts]
+fileshear = "fileshear.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
