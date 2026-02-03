@@ -22,7 +22,7 @@ This program:
 
 * Requests user confirmation.
 
-* Moves files to trash (or archive directory if specified) instead of hard deletion.
+* Moves files to a new "ShearArchive" directory inside working directory.
 
 * User can then choose to hard delete relocated files.
 
